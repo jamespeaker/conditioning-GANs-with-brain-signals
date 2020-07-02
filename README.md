@@ -15,9 +15,12 @@ Figure 1. A visual representation of this project. The participant views a serie
 
 ## Encoder
 
-The encoder seen in Figure 1 is a truncation of a pretrained model. This pretrained model was trained to classify 40 different image classes, using the EEG data. This is shown below in Figure 2. See that the encoder outputs a 126-length embedding of the EEG. We theorize that these embeddings may contain both visually-relevant and class-discriminative information extracted from the input signals. The embedding length of 126  was chosen so we can reshape the embedding to the square cuboid shape of (3,3,14).
-
+The encoder seen in Figure 1 is a truncation of a pretrained model. This pretrained model was trained to classify 40 different image classes, using the EEG data. This is shown below in Figure 2. See that the encoder outputs a 126-length embedding of the EEG. The embedding length of 126  was chosen so we can reshape the embedding to the square cuboid shape of (3,3,14).
 
 <img src="explaining_the_encoder.png" width="1000">
 
 Figure 1. A visual representation of the classifier and how it is truncated to give the encoder.
+
+<br />
+
+**Result:** we now have an encoder which reduces the dimensionality of the EEG (on 128 channels) down to a 126-lenth embedding. We theorize that these embeddings may contain both visually-relevant and class-discriminative information extracted from the input signals.
