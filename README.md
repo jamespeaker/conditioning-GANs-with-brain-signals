@@ -17,5 +17,5 @@ This project aims to look at how deep learning can be applied to mind reading. I
 The encoder seen in Figure 1 is a truncation of a pretrained model. This pretrained model was trained to classify 40 different image classes, using the EEG data. This is shown below in Figure 2. See that the encoder outputs a 126-length embedding of the EEG. We theorize that these embeddings may contain both visually-relevant and class-discriminative information extracted from the input signals. The embedding length of 126  was chosen so we can reshape the embedding to the square cuboid shape of (3,3,14).
 
 
-<img src="explaining_the_encoder.png" width="600">
+<img src="explaining_the_encoder.png" width="1000">
 
