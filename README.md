@@ -19,7 +19,7 @@ The encoder seen in Figure 1 is a truncation of a pretrained model. This pretrai
 
 <img src="explaining_the_encoder.png" width="1000">
 
-Figure 1. A visual representation of the classifier and how it is truncated to give the encoder.
+Figure 2. A visual representation of the classifier and how it is truncated to give the encoder.
 
 <br />
 
@@ -33,3 +33,36 @@ A typical GAN is made up of the generator model and the disciminator model. The 
 
 
 <ins> Conditional GAN Explanation </ins> <br />
+It becomes very challenging for GANs to generate images that are from different classes. To solve this, the generator and discriminator of the conditional GAN (CGAN) receieve information about the class of the image. Often the information is a one-hot encoding of the image class. This allows the generator to learn to generate images of the correct class. Below in Figure 3 we see how the EEG embedding is used in a CGAN.
+
+
+[[[[[[[[[[[[image]]]]]]]]]]]]]]]
+
+
+
+Figure 3. A CGAN using convolutional layers in the discriminator and transposed convolutional layers in the generator. The EEG embedding is appended to the latent space of the generator and to the penultimate output of the discriminator.
+
+
+
+I think the plan is to have
+I should probs read the thing gary posted though about projects.
+
+an explanation of the other GAN architectures here
+
+Then a results
+
+Then a method section which refers to the code in repo.
+
+i.e.
+
+1. train EEG classifier
+2. take out EEG embeddings
+3. build image dataset
+4. build full dataset
+5. GAN models
+6. training the GAN
+
+
+
+
+
