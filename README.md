@@ -44,17 +44,16 @@ Figure 3. A CGAN using convolutional layers in the discriminator and transposed 
 
 
 
-I think the plan is to have
-I should probs read the thing gary posted though about projects.
+I think the plan is to have:
 
-an explanation of the other GAN architectures here
+(I should probs read the thing gary posted though about projects.)
 
-Then a results
+1. an explanation of the other GAN architectures here
 
-Then a method section which refers to the code in repo.
+2. Then a results
 
+3. Then a method section which refers to the code in repo.
 i.e.
-
 1. train EEG classifier
 2. take out EEG embeddings
 3. build image dataset
