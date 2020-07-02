@@ -6,6 +6,8 @@ MSc Computer Science thesis. The aim is to create a model capable of generating 
 
 Figure 1. A visual representation of this project. The participant views a series of images and the EEG signals are encoded. These encodings are then used by the generator to attempt to predict the image seen.
 
+<br /> 
+
 This project aims to look at how deep learning can be applied to mind reading. It also gives insight on:
 1. How the EEG brain signal embeddings compare to one-hot encoding, when used to condition a GAN.
 2. What architectures of GANs are best suited for this problem.
