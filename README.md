@@ -24,3 +24,10 @@ Figure 1. A visual representation of the classifier and how it is truncated to g
 <br />
 
 **Result:** we now have an encoder which reduces the dimensionality of the EEG (on 128 channels) down to a 126-lenth embedding. We theorize that these embeddings may contain both visually-relevant and class-discriminative information extracted from the input signals.
+
+
+## Generator
+
+<ins> GAN Explanation </ins> <br />
+A typical GAN is made up of the generator model and the disciminator model. The aim of the generator is to generate data mimicking the dataset. The aim of the discriminator is to classify the generated data as being from the real dataset or the fake dataset. The generator learns to trick the discriminator into wrongly classifying the fake dataset. If the adversarial process is successful, the generator can generate fake images indistinguishable from real images. 
+
