@@ -1,6 +1,6 @@
 # Using EEG Signals to Condition Variants of GANs
 
-MSc Computer Science thesis. The aim is to create a model capable of generating an approximation of the images seen by people. I attempt to replicate previous work (PeRCeiVe Lab) to condition variants of GANs with EEG brain signals. 
+MSc Computer Science thesis. The aim is to create a model capable of generating an approximation of images seen by people. I attempt to replicate previous work (PeRCeiVe Lab) to condition variants of GANs with EEG brain signals. 
 
 ## Summary
 
@@ -33,33 +33,38 @@ A typical GAN is made up of the generator model and the disciminator model. The 
 
 
 <ins> Conditional GAN Explanation </ins> <br />
-It becomes very challenging for GANs to generate images that are from different classes. To solve this, the generator and discriminator of the conditional GAN (CGAN) receieve information about the class of the image. Often the information is a one-hot encoding of the image class. This allows the generator to learn to generate images of the correct class. Below in Figure 3 we see how the EEG embedding is used in a CGAN.
+It becomes very challenging for GANs to generate images that are from different classes. To solve this, the generator and discriminator of the conditional GAN (CGAN) receive information about the class of the image. Often the information is a one-hot encoding of the image class. This allows the generator to learn to generate images of the correct class. Below in Figure 3 we see how the EEG embedding is used in a CGAN.
 
 
 <img src="explaining_cgan.png" width="1000">
 
+Figure 3. A conditional GAN (CGAN) using convolutional layers in the discriminator and transposed convolutional layers in the generator. The EEG embedding is appended to the latent space of the generator and to the penultimate output of the discriminator.
 
 
-Figure 3. A CGAN using convolutional layers in the discriminator and transposed convolutional layers in the generator. The EEG embedding is appended to the latent space of the generator and to the penultimate output of the discriminator.
+## Results
+
+In Figure 4 we see the results. We look at 10 classes of the images. The GAN architectures (e.g. ACGAN) are explained in the next section. On the left we have two sample images from the dataset. Then we have the results from the ACGAN conditioned on a one-hot encoding of the classes. The remaining GAN architectures use the EEG embeddings as conditioning.
+
+ might be pics in my memory stick
 
 
+## GAN Architecures
 
-I think the plan is to have:
+Find these in the gan_models.py.
 
-(I should probs read the thing gary posted though about projects.)
+## Method
 
-1. an explanation of the other GAN architectures here
+In this section I explain the method used and relate this to the code in the repository. 
 
-2. Then a results
+### Training the EEG Classifier
 
-3. Then a method section which refers to the code in repo.
-i.e.
-1. train EEG classifier
-2. take out EEG embeddings
-3. build image dataset
-4. build full dataset
-5. GAN models
-6. training the GAN
+### Extracting the EEG embeddings
+
+### Build the Image Dataset
+
+### Build the Full Dataset
+
+### Training the GAN
 
 
 
