@@ -36,7 +36,7 @@ A typical GAN is made up of the generator model and the disciminator model. The 
 It becomes very challenging for GANs to generate images that are from different classes. To solve this, the generator and discriminator of the conditional GAN (CGAN) receieve information about the class of the image. Often the information is a one-hot encoding of the image class. This allows the generator to learn to generate images of the correct class. Below in Figure 3 we see how the EEG embedding is used in a CGAN.
 
 
-[[[[[[[[[[[[image]]]]]]]]]]]]]]]
+<img src="explaining_cgan.png" width="1000">
 
 
 
