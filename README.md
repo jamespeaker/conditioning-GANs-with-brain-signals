@@ -57,17 +57,21 @@ Figure 3. Final results of our project. GAN architectures are explained in the f
 
 Find these in the gan_models.py.
 
-## Method
+## Method and Code
 
 In this section I explain the method used and relate this to the code in the repository. 
 
-### Training the EEG Classifier
+### Embedding the EEG
 
-### Extracting the EEG embeddings
-
-### Build the Image Dataset
+Code for this is found in the embed_the_eeg notebook. In this notebook the RNN classifier is trained to use the EEG data to predict what class of image the user was observing at the time. Then this RNN classifier is truncated to output the 126-length pernultimate output. This output is the embedding. These embeddings are then averaged for each class. It was found that using embedding for each image as conditioning did not work. This code is based on the code provided by PeRCeiVe Lab. Note that this is the only code provided to me.
 
 ### Build the Full Dataset
+
+Code for this is found in the creating_full_dataset notebook. In this notebook the images are converted into 64x64x3 numpy arrays. Then the images, EEG embeddings and labels (one-hot encoded) are brought together into one dataset. This dataset is then shuffled and saved.
+
+### Building a Classifier
+
+One of the architectures (Hybrid ACGAN) uses a pretrained classifier in the architecture. This is pre-trained to classify the 20 images classes. The notebook image_classifier trains this model and saves it.
 
 ### Training the GAN
 
