@@ -8,7 +8,7 @@ This project aims to look at how deep learning can be applied to mind reading. I
 1. How the EEG brain signal embeddings compare to one-hot encoding, when used to condition a GAN.
 2. What architectures of GANs are best suited for this problem.
 
-<img src="project_visualization.png" width="600">
+<img src="images_for_readme/project_visualization.png" width="600">
 
 Figure 1. A visual representation of this project. The participant views a series of images and the EEG signals are encoded. These encodings are then used by the generator to attempt to predict the image seen.
 
