@@ -45,6 +45,11 @@ Figure 3. A conditional GAN (CGAN) using convolutional layers in the discriminat
 
 In Figure 4 we see the results. We look at 10 classes of the images. The GAN architectures (e.g. ACGAN) are explained in the next section. On the left we have two sample images from the dataset. Then we have the results from the ACGAN conditioned on a one-hot encoding of the classes. The remaining GAN architectures use the EEG embeddings as conditioning.
 
+
+<img src="final_results.png" width="600">
+Figure 3. Final results of our project. GAN architectures are explained in the following section.
+
+
  might be pics in my memory stick
 
 
