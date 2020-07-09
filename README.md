@@ -60,7 +60,7 @@ In this section I explain the method used and relate this to the code in the rep
 
 ### Embedding the EEG
 
-Code for this is found in the embed_the_eeg notebook. In this notebook the RNN classifier is trained to use the EEG data to predict what class of image the user was observing at the time. Then this RNN classifier is truncated to output the 126-length pernultimate output. This output is the embedding. These embeddings are then averaged for each class. It was found that using embedding for each image as conditioning did not work. This code is based on the code provided by PeRCeiVe Lab. Note that this is the only code provided to me.
+Code for this is found in the embed_the_eeg notebook. In this notebook the RNN classifier is trained to use the EEG data to predict what class of image the user was observing at the time. Then this RNN classifier is truncated to output the 126-length pernultimate output. This output is the embedding. These embeddings are then averaged for each class. It was found that using the embedding for each image as conditioning did not work. This code is based on the code provided by PeRCeiVe Lab. Note that this is the only code provided to me.
 
 ### Build the Full Dataset
 
