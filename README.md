@@ -1,6 +1,6 @@
 # Using EEG Signals to Condition Variants of GANs
 
-MSc Computer Science thesis. The aim is to create a model capable of generating an approximation of images seen by people. I attempt to replicate previous work (PeRCeiVe Lab) to condition variants of GANs with EEG brain signals. 
+MSc Computer Science thesis. The aim is to create a model capable of generating an approximation of images seen by an individual. To do this, EEG brain signals are measured and embedded using an LSTM. Then, these embeddings are used to condition variants of GANs, with the hypothesis that the embeddings may provide the GAN with more visual information. This research follows previous work by PeRCeiVe Lab.
 
 ## Summary
 
