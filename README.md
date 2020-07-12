@@ -68,10 +68,11 @@ Code for this is found in the creating_full_dataset notebook. In this notebook t
 
 ### Building a Classifier
 
-One of the architectures (Hybrid ACGAN) uses a pretrained classifier in the architecture. This is pre-trained to classify the 20 images classes. The notebook image_classifier trains this model and saves it.
+One of the architectures (Hybrid ACGAN) uses a pretrained classifier in the architecture. This is pre-trained to classify the 20 images classes. The notebook image_classifier trains this model and saves it. 
 
 ### Training the GAN
 
+In the notebook training_gans, we have the code to train the GANs. This notebook shows the DeLiGAN hybrid DeLiGAN being trained. The DeLiGAN involves a mixure model which reparameterizes the latent space (space in which the noise is generated). This is a layer I have defined in the notebook as DeLiGANLayer. We then have three functions which build the Keras GAN models. One for the discriminator, one for the generator and one for the GAN (combining the previous two). After this we have a train function and some functions to help display outputs of the GAN, as it is trained. 
 
 
 
