@@ -23,7 +23,7 @@ Figure 2. A visual representation of the classifier and how it is truncated to g
 
 <br />
 
-**Result:** we now have an encoder which reduces the dimensionality of the EEG (on 128 channels) down to a 126-length embedding. We theorize that these embeddings may contain both visually-relevant and class-discriminative information extracted from the input signals.
+**Result:** we now have an encoder which reduces the dimensionality (128x500) of the EEG down to a 126-length embedding. We hypothesize that these embeddings may contain both visually-relevant and class-discriminative information extracted from the input signals.
 
 
 ## Generator
