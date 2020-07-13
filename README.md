@@ -50,7 +50,7 @@ In Figure 4 we see the results. We look at 10 classes of the images. The GAN arc
 Figure 3. Final results of our project. GAN architectures are explained in the following section.
 
 
-## GAN Architecures
+## GAN Architectures Used
 
 #### ACGAN (conditioned on one-hot encoding)
 
