@@ -52,9 +52,30 @@ Figure 3. Final results of our project. GAN architectures are explained in the f
 
 ## GAN Architecures
 
-Find the code for these in ???????
+#### ACGAN (conditioned on one-hot encoding)
 
-#### ACGAN
+Code: acgan_eeg.py
+
+The Auxiliary Classifier GAN is an alternative to the Conditional GAN (CGAN). In the ACGAN architecture, the generator is conditioned on one-hot encodings of the label, but the discriminator is not (unlike in CGAN). Instead, the discriminator has two outputs, the first being the real/fake prediction of the image and the second being the auxiliary classification. This second output is a prediction of the image class. When the discriminator is trained on both the real/fake label and class label, the generator is able to non-adversarially learn  to generate images of the correct class. 
+
+#### ACGAN (conditioned on EEG embeddings)
+
+Code: acgan_one_hot_encodings.py
+
+This is exactly the same as the above, however, the generator is conditioned on the EEG embeddings, rather than a one-hot encoding.
+
+#### Hybrid ACGAN (conditioned on EEG embeddings)
+
+Code: hybrid_acgan_eeg.py
+
+In this architecture the discriminator is made up of two models. The first is the typical discriminator that is trained only to predict if the image is fake or real. The seconds is a pre-trained classifier which is only used for prediting the image class. These two models (the first being untrainable and the second being trainable) are combined giving a model similar to ACGAN.
+
+#### Hybrid DeLiGAN (conditioned on EEG embeddings)
+
+Code: hybrid_deligan_eeg.py
+
+This model is similar to the Hybrid ACGAN, however, it uses an additional trainable layer. This layer uses a mixture model to reparameterize the latent space (space in which the noise is generated). This is suspected to allow the generator to better learn mappings from complex distributions. In summary, this is the same model as the Hybrid ACGAN, however, the noise first is transformed by the mixture model before being concatenated with the EEG embeddings.
+
 
 ## Method and Code
 
