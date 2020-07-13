@@ -28,6 +28,8 @@ Figure 2. A visual representation of the classifier and how it is truncated to g
 
 ## Generator
 
+**This section explains GANs for those unfamiliar. To see the GAN architectures used, scroll down to 'GAN Architectures Used'.**
+
 #### GAN Explanation
 A typical GAN is made up of the generator model and the disciminator model. The aim of the generator is to generate fake data mimicking the real dataset (usually consisting of images). The aim of the discriminator is to classify the generated data as being from the real dataset or the fake dataset. The generator learns to trick the discriminator into wrongly classifying the fake dataset. If the adversarial process is successful, the generator can generate fake images indistinguishable from real images. 
 
