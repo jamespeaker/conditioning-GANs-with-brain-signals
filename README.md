@@ -28,11 +28,11 @@ Figure 2. A visual representation of the classifier and how it is truncated to g
 
 ## Generator
 
-<ins> GAN Explanation </ins> <br />
+#### GAN Explanation
 A typical GAN is made up of the generator model and the disciminator model. The aim of the generator is to generate fake data mimicking the real dataset (usually consisting of images). The aim of the discriminator is to classify the generated data as being from the real dataset or the fake dataset. The generator learns to trick the discriminator into wrongly classifying the fake dataset. If the adversarial process is successful, the generator can generate fake images indistinguishable from real images. 
 
 
-<ins> Conditional GAN Explanation </ins> <br />
+#### Conditional GAN Explanation
 It becomes very challenging for GANs to generate images that are from different classes. To solve this, the generator and discriminator of the conditional GAN (CGAN) receive information about the class of the image. Often the information is a one-hot encoding of the image class. This allows the generator to learn to generate images of the correct class. Below in Figure 3 we see how the EEG embedding is used in a CGAN.
 
 
@@ -52,25 +52,27 @@ Figure 3. Final results of our project. GAN architectures are explained in the f
 
 ## GAN Architecures
 
-Find these in the gan_models.py.
+Find the code for these in ???????
+
+#### ACGAN
 
 ## Method and Code
 
 In this section I explain the method used and relate this to the code in the repository. 
 
-### Embedding the EEG
+#### Embedding the EEG
 
 Code for this is found in the embed_the_eeg notebook. In this notebook the RNN classifier is trained to use the EEG data to predict what class of image the user was observing at the time. Then this RNN classifier is truncated to output the 126-length pernultimate output. This output is the embedding. These embeddings are then averaged for each class. It was found that using the embedding for each image as conditioning did not work. This code is based on the code provided by PeRCeiVe Lab. Note that this is the only code provided to me.
 
-### Build the Full Dataset
+#### Build the Full Dataset
 
 Code for this is found in the creating_full_dataset notebook. In this notebook the images are converted into 64x64x3 numpy arrays. Then the images, EEG embeddings and labels (one-hot encoded) are brought together into one dataset. This dataset is then shuffled and saved.
 
-### Building a Classifier
+#### Building a Classifier
 
 One of the architectures (Hybrid ACGAN) uses a pretrained classifier in the architecture. This is pre-trained to classify the 20 images classes. The notebook image_classifier trains this model and saves it. 
 
-### Training the GAN
+#### Training the GAN
 
 In the notebook training_gans, we have the code to train the GANs. This notebook shows the DeLiGAN hybrid DeLiGAN being trained. The DeLiGAN involves a mixure model which reparameterizes the latent space (space in which the noise is generated). This is a layer I have defined in the notebook as DeLiGANLayer. We then have three functions which build the Keras GAN models. One for the discriminator, one for the generator and one for the GAN (combining the previous two). After this we have a train function and some functions to help display outputs of the GAN, as it is trained. 
 
