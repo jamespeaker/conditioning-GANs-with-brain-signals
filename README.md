@@ -54,6 +54,8 @@ Figure 3. Final results of our project. GAN architectures are explained in the f
 
 ## GAN Architectures Used
 
+Find these in ``training_gan/models``
+
 #### ACGAN (conditioned on one-hot encoding)
 
 ``acgan_eeg.py``
@@ -103,9 +105,9 @@ One of the architectures (Hybrid ACGAN) uses a pretrained classifier in the arch
 
 #### Training the GAN
 
-``training_gan/training_hybrid_deligan.ipynb``
+``training_gan/training_hybrid_deligan.py``
 
-This notebook shows the DeLiGAN hybrid DeLiGAN being trained. The DeLiGAN involves a mixure model which reparameterizes the latent space (space in which the noise is generated). This is a layer I have defined in  ``training_gan/models/``  as DeLiGANLayer. We then have three functions which build the Keras GAN models. One for the discriminator, one for the generator and one for the GAN (combining the previous two). After this we have a train function and some functions to help display outputs of the GAN, as it is trained. 
+This shows the hybrid DeLiGAN being trained. The DeLiGAN involves a mixure model which reparameterizes the latent space (space in which the noise is generated). This is a layer I have defined in as DeLiGANLayer in the code. We then have three functions which build the Keras GAN models. One for the discriminator, one for the generator and one for the GAN (combining the previous two). After this we have a train function. This trains the GAN and every epoch it prints out 20 images, one for each class. 
 
 
 
